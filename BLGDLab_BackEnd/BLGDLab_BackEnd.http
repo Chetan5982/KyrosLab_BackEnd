@@ -1,0 +1,6 @@
+@BLGDLab_BackEnd_HostAddress = http://localhost:5192
+
+GET {{BLGDLab_BackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

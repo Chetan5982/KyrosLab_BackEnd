@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "BLGDLab_BackEnd.Controllers.BlogController",
+    "Method": "GetAllBlogsAsync",
+    "RelativePath": "api/Blog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jsonString",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BLGDLab_BackEnd.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast/GetWeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BLGDLab_BackEnd.WeatherForecast, BLGDLab_BackEnd, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BLGDLab_BackEnd.Controllers.WeatherForecastController",
+    "Method": "Login",
+    "RelativePath": "WeatherForecast/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

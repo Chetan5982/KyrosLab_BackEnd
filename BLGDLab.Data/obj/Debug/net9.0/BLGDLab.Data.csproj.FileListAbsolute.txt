@@ -1,0 +1,12 @@
+D:\BLGDLabNew\New folder\BLGDLab.Data\bin\Debug\net9.0\BLGDLab.Data.deps.json
+D:\BLGDLabNew\New folder\BLGDLab.Data\bin\Debug\net9.0\BLGDLab.Data.dll
+D:\BLGDLabNew\New folder\BLGDLab.Data\bin\Debug\net9.0\BLGDLab.Data.pdb
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.csproj.AssemblyReference.cache
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.AssemblyInfoInputs.cache
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.AssemblyInfo.cs
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.csproj.CoreCompileInputs.cache
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.dll
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\refint\BLGDLab.Data.dll
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\BLGDLab.Data.pdb
+D:\BLGDLabNew\New folder\BLGDLab.Data\obj\Debug\net9.0\ref\BLGDLab.Data.dll

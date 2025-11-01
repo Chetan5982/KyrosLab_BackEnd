@@ -1,0 +1,15 @@
+D:\BLGDLabNew\New folder\BLGDLab.Business\bin\Debug\net9.0\BLGDLab.Business.deps.json
+D:\BLGDLabNew\New folder\BLGDLab.Business\bin\Debug\net9.0\BLGDLab.Business.dll
+D:\BLGDLabNew\New folder\BLGDLab.Business\bin\Debug\net9.0\BLGDLab.Business.pdb
+D:\BLGDLabNew\New folder\BLGDLab.Business\bin\Debug\net9.0\BLGDLab.Data.dll
+D:\BLGDLabNew\New folder\BLGDLab.Business\bin\Debug\net9.0\BLGDLab.Data.pdb
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.csproj.AssemblyReference.cache
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.AssemblyInfoInputs.cache
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.AssemblyInfo.cs
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.csproj.CoreCompileInputs.cache
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab..9DF47791.Up2Date
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.dll
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\refint\BLGDLab.Business.dll
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\BLGDLab.Business.pdb
+D:\BLGDLabNew\New folder\BLGDLab.Business\obj\Debug\net9.0\ref\BLGDLab.Business.dll
