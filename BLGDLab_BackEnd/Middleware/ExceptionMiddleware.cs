@@ -12,7 +12,7 @@ namespace BLGDLab_BackEnd.Middleware
             _request = request;
         }
 
-        public async void Invoke(HttpContext context)
+        public async Task Invoke(HttpContext context)
         {
             try
             {
@@ -20,11 +20,11 @@ namespace BLGDLab_BackEnd.Middleware
             }
             catch (Exception Ex)
             {
-                HandleExecption(context,Ex);
+                await HandleExecption(context,Ex);
             }
         }
 
-        private void HandleExecption(HttpContext context,Exception exception)
+        private async Task HandleExecption(HttpContext context,Exception exception)
         {
             context.Response.ContentType = "application/json";
 
@@ -42,7 +42,7 @@ namespace BLGDLab_BackEnd.Middleware
                 StatusCode = context.Response.StatusCode,
             });
 
-            context.Response.WriteAsync(result);
+            await context.Response.WriteAsync(result);
         }
 
 
