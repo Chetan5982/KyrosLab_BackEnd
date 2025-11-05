@@ -1,4 +1,5 @@
 using BLGDLab.Data;
+using BLGDLab_BackEnd.Middleware;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -80,11 +81,13 @@ app.UseRouting();
 
 app.UseCors();
 
+app.UseMiddleware<ExceptionMiddleware>();
+
 app.UseAuthentication();
 
 app.UseHttpsRedirection();
 
-//app.UseAuthorization();
+app.UseAuthorization();
 
 app.MapControllers();
 

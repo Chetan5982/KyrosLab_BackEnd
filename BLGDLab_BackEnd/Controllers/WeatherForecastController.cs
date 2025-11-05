@@ -14,14 +14,6 @@ namespace BLGDLab_BackEnd.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        private readonly IAuthenticationService _service;// ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IAuthenticationService service)
-        {
-            // _logger = logger;
-            _service = service;
-        }
-
         [HttpGet("GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -33,36 +25,6 @@ namespace BLGDLab_BackEnd.Controllers
             })
             .ToArray();
         }
-
-
-        [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
-        {
-
-
-            BaseResponse baseResponse = new BaseResponse();
-            HttpStatusCode httpStatusCode = HttpStatusCode.OK;
-            try
-            {
-                var data = await _service.Login(request.userName, request.password);
-                if (data == null)
-                {
-                    baseResponse.Message = "User Not Found!!";
-                }
-                else
-                {
-                    baseResponse.Data = data;
-                }
-            }
-            catch (Exception Ex)
-            {
-                baseResponse.Message = Ex.Message;
-                httpStatusCode = HttpStatusCode.InternalServerError;
-
-            }
-            return StatusCode((int)httpStatusCode, baseResponse);
-        }
-
 
     }
 }
