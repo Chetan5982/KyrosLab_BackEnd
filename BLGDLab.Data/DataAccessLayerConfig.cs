@@ -12,7 +12,7 @@ namespace BLGDLab.Data
 
             services.AddSingleton<SqlConnectionRepository>(_ => new SqlConnectionRepository(blgdConnString));
             services.AddScoped<IAuthenticationRepository, AuthenticationRepository>();
-
+            services.AddScoped<IBlogRepository, BlogRepository>();
             return services; 
         }
 

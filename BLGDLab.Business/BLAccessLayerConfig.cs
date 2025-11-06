@@ -10,7 +10,7 @@ namespace BLGDLab.Data
         public static IServiceCollection AddBLAccessLayer(this IServiceCollection services)
         {
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-
+            services.AddScoped<IBlogService, BlogService>();            
             return services;
         }
     }

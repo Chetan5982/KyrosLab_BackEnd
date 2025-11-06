@@ -103,7 +103,8 @@ public sealed class BearerSecuritySchemeTransformer(IAuthenticationSchemeProvide
                     Type = SecuritySchemeType.ApiKey,
                     Scheme = "bearer", 
                     In = ParameterLocation.Header,
-                    BearerFormat = "Json Web Token"
+                    BearerFormat = "Json Web Token",
+                    Name= "Authorization"
                 }
             };
             document.Components ??= new OpenApiComponents();
