@@ -1,10 +1,12 @@
 ﻿using BLGDLab.Business.IServices;
 using BLGDLab.Business.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace BLGDLab_BackEnd.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BlogController : ControllerBase

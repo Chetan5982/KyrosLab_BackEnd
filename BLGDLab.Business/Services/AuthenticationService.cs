@@ -1,4 +1,5 @@
 ﻿using BLGDLab.Business.IServices;
+using BLGDLab.Business.JWTHelper;
 using BLGDLab.Data.IRepository;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,17 @@ namespace BLGDLab.Business.Services
 
         public async Task<dynamic> Login(string userName, string password)
         {
-            return await _authentication.Login(userName, password);
+            var data = await _authentication.Login(userName, password);
+            string token="";
+            if (data != null)
+                token = JWTTokenGenerator.GenerateToken(data);
+            var result = new
+            {
+                userData = data,
+                token = token
+            };
+
+            return result;
         }
     }
 }
