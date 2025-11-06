@@ -76,3 +76,5 @@ Thumbs.db
 desktop.ini
 /*Chetan*/
 /BLGDLab_BackEnd/obj/Debug/net9.0/ApiEndpoints.json
+/BLGDLab_BackEnd/Properties/launchSettings.json
+/BLGDLab_BackEnd/BLGDLab_BackEnd.csproj.user
