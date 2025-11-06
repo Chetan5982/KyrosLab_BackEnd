@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.OpenApi;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.Swagger;
 using System.Text;
 
 
@@ -67,6 +66,10 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.MapOpenApi();
     app.UseDeveloperExceptionPage();
+    app.UseSwaggerUi((options) => {
+        options.Path = "/swagger";
+        options.DocumentPath = "/openapi/v1.json";
+    });
 }
 
 app.UseRouting();
