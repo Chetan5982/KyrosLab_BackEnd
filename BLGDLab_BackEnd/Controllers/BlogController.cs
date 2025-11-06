@@ -6,9 +6,9 @@ using System.Net;
 
 namespace BLGDLab_BackEnd.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class BlogController : ControllerBase
     {
         private readonly IBlogService _blogService;

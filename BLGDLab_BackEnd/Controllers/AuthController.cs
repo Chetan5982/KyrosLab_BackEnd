@@ -14,6 +14,7 @@ namespace BLGDLab_BackEnd.Controllers
             _service = service;
         }
 
+        
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
