@@ -1,4 +1,5 @@
 ﻿using BLGDLab.Business.IServices;
+using BLGDLab.Business.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -18,11 +19,11 @@ namespace BLGDLab_BackEnd.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {
-            BaseResponse baseResponse = new BaseResponse();
+            APIResponse baseResponse = new APIResponse();
 
             var data = await _service.Login(request.userName, request.password);
 
-            if (data == null)
+            if (data.GetType().GetProperty("userData").GetValue(data) == null)
             {
                 baseResponse.Message = "User Not Found!!";
             }

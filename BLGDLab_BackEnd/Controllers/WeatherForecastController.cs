@@ -29,13 +29,6 @@ namespace BLGDLab_BackEnd.Controllers
     }
 }
 
-public class BaseResponse
-{
-    public bool Success { get; set; }
-    public string Message { get; set; } = string.Empty;
-    public object? Data { get; set; }
-}
-
 public class LoginRequest
 {
     [Required(ErrorMessage ="User Name is required")]

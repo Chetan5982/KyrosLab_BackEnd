@@ -23,7 +23,7 @@ namespace BLGDLab.Business.Services
         {
             var data = await _authentication.Login(userName, password);
             string token="";
-            if (data)
+            if (data != null)
                 token = JWTTokenGenerator.GenerateToken(data);
             var result = new
             {
