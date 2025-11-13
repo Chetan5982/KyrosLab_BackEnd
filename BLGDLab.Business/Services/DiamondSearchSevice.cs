@@ -3,6 +3,7 @@ using BLGDLab.Business.IServices;
 using BLGDLab.Data;
 using BLGDLab.Data.IRepositories;
 using BLGDLab.Data.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,15 @@ namespace BLGDLab.Business.Services
     {
         private readonly IDiamondSearchRepository _repository;
         private readonly IConfiguration _configuration;
-        public DiamondSearchSevice(IDiamondSearchRepository repository, IConfiguration configuration)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly string _url;
+        public DiamondSearchSevice(IDiamondSearchRepository repository, IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             this._repository = repository;
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
+            _url = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
+
         }
         public async Task<Dictionary<string, IEnumerable<dynamic>>> GetDiamondFilter(bool isForDataSet, int userId, bool isIncludeOnlyInstockCriteria = false)
         {
@@ -31,7 +37,7 @@ namespace BLGDLab.Business.Services
             var branches = data.ElementAtOrDefault(2);
             var vendors = data.ElementAtOrDefault(5);
 
-            var PhotoPaths = new CustomModel.ManageFile(_configuration, "Images/DiamondShapes", "../Images/NoImagePic.png");
+            var PhotoPaths = new CustomModel.ManageFile(_configuration, _url + "/Images/DiamondShapes", _url + "../Images/NoImagePic.png");
 
             IEnumerable<object> stockStatusList = stockStatuses.Select((value, index) => new
             {
@@ -95,18 +101,18 @@ namespace BLGDLab.Business.Services
                 ["vendors"] = objVendors,
                 ["branches"] = branches,
                 ["shapes"] = shapeList,
-                ["colors"] =colorList,
-                ["clarities"] =clarityList,
-                ["cuts"] =cutList,
-                ["polishs"] =polishList,
-                ["symms"] =symmList,
-                ["fluos"] =fluoList,
-                ["labs"] =labList,
-                ["fancyColorIntensities"] =fancyColorIntensityList,
-                ["fancyColorOverTones"] =fancyColorOverToneList,
-                ["fancyColors"] =fancyColorList,
-                ["tingles"] =tingeList,
-                ["sizeGroups"] =sizeGroupList
+                ["colors"] = colorList,
+                ["clarities"] = clarityList,
+                ["cuts"] = cutList,
+                ["polishs"] = polishList,
+                ["symms"] = symmList,
+                ["fluos"] = fluoList,
+                ["labs"] = labList,
+                ["fancyColorIntensities"] = fancyColorIntensityList,
+                ["fancyColorOverTones"] = fancyColorOverToneList,
+                ["fancyColors"] = fancyColorList,
+                ["tingles"] = tingeList,
+                ["sizeGroups"] = sizeGroupList
             };
         }
     }

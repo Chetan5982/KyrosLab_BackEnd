@@ -52,8 +52,11 @@ builder.Services.AddCors(options =>
 });
 
 
+builder.Services.AddHttpContextAccessor();
+
 string blgdConnString = SampleLibOut.LibOut.Out(1);
 string ablgdConnString = SampleLibOut.LibOut.Out(2);
+
 
 blgdConnString = string.IsNullOrWhiteSpace(blgdConnString) ? builder.Configuration["ConnectionString:BLGDConnection"] ?? string.Empty : blgdConnString;
 
@@ -73,12 +76,9 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     });
 }
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
-    RequestPath = ""
-});
+app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseCors();
@@ -87,7 +87,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthentication();
 
-app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
 
