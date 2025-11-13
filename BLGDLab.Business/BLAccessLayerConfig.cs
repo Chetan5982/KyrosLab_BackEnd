@@ -11,6 +11,7 @@ namespace BLGDLab.Data
         {
             services.AddScoped<IAuthenticationService, AuthenticationService>();
             services.AddScoped<IBlogService, BlogService>();            
+            services.AddScoped<IDiamondSearchService, DiamondSearchSevice>();
             return services;
         }
     }

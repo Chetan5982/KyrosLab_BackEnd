@@ -16,6 +16,16 @@ namespace BLGDLab.Data.Repository
             _sqlConnectionRepository = sqlConnectionRepository;
         }
 
+        public Task<IEnumerable<dynamic>> DeleteBlogAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task EditBlogAsync(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<dynamic>> GetAllBlogsAsync(string jsonString)
         {
             var con= _sqlConnectionRepository._blgdContext;
@@ -26,6 +36,14 @@ namespace BLGDLab.Data.Repository
             return result;
         }
 
+        public Task<IEnumerable<dynamic>> GetBlogByCategoryUrlAsync(string jsonString)
+        {
+            throw new NotImplementedException();
+        }
 
+        public Task<IEnumerable<dynamic>> GetBlogByTitleAsync(string jsonString)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

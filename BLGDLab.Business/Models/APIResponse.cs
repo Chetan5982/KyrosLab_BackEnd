@@ -8,14 +8,14 @@ namespace BLGDLab.Business.Models
 {
     public class APIResponse
     {
-        public bool Success { get; set; }
+        public bool Status { get; set; }
         public string Message { get; set; } = string.Empty;
         public object? Data { get; set; }
         public int StatusCode { get; set; }
 
         public APIResponse()
         {
-            Success = true;
+            Status = true;
         }
     }
 }
