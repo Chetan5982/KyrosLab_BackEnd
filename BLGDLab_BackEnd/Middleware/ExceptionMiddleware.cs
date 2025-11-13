@@ -37,7 +37,7 @@ namespace BLGDLab_BackEnd.Middleware
 
             var result = JsonSerializer.Serialize(new APIResponse
             {
-                Success = false,
+                Status = false,
                 Message = exception.Message,
                 StatusCode = context.Response.StatusCode,
             });

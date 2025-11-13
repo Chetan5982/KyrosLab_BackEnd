@@ -18,8 +18,8 @@ namespace BLGDLab_BackEnd.Controllers
             _blogService = blogService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllBlogsAsync(string jsonString)
+        [HttpPost]
+        public async Task<IActionResult> GetAllBlogsAsync([FromBody]string jsonString)
         {
             APIResponse api = new APIResponse();
             HttpStatusCode httpStatusCode = HttpStatusCode.OK;
@@ -34,5 +34,22 @@ namespace BLGDLab_BackEnd.Controllers
             }
             return StatusCode((int)httpStatusCode, api);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> GetBlogByCategoryUrl([FromBody] string jsonString)
+        {
+            APIResponse api = new APIResponse();
+            HttpStatusCode httpStatusCode = HttpStatusCode.OK;
+            return StatusCode((int)httpStatusCode, api);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetBlogByTitle([FromBody] string jsonString)
+        {
+            APIResponse api = new APIResponse();
+            HttpStatusCode httpStatusCode = HttpStatusCode.OK;
+            return StatusCode((int)httpStatusCode, api);
+        }
+
     }
 }

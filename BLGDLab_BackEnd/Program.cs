@@ -72,6 +72,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     });
 }
 
+app.UseStaticFiles();
 app.UseRouting();
 
 app.UseCors();
@@ -81,7 +82,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
+
 app.UseAuthorization();
 
 app.MapControllers();
