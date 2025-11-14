@@ -29,7 +29,7 @@ namespace BLGDLab.Business.Services
         }
         public async Task<Dictionary<string, IEnumerable<dynamic>>> GetDiamondFilter(bool isForDataSet, int userId, bool isIncludeOnlyInstockCriteria = false)
         {
-            IEnumerable<IEnumerable<dynamic>> data = (await _repository.GetDiamondFilter(isForDataSet, userId, isIncludeOnlyInstockCriteria));
+            IEnumerable<IEnumerable<dynamic>> data = (await _repository.GetDiamondFilter(true, 18916, true));
             List<string> stockStatuses = new List<string> { "On Hand", "On Memo", "On Hold" };
 
             var fields = data.ElementAtOrDefault(0);

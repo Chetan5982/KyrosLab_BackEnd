@@ -16,7 +16,7 @@ namespace BLGDLab.Data.Model
 
             private string PathToFiles { get; set; }
 
-            private string ErrorPath { get; set; }
+            public string ErrorPath { get; set; }
 
             public ManageFile(IConfiguration configuration, string pathToFiles, string errorPath)
             {
