@@ -66,7 +66,6 @@ BLGDLab_BackEnd/obj/
 
 # Publish outputs
 publish/
-wwwroot/
 dist/
 node_modules/
 
