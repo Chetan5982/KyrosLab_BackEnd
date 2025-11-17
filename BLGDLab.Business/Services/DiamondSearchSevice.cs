@@ -27,6 +27,13 @@ namespace BLGDLab.Business.Services
             _url = $"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
 
         }
+
+        public async  Task<IEnumerable<dynamic>> DimaondSearchData(string json)
+        {
+           var data=await _repository.DimaondSearchData(json);
+            return data;
+        }
+
         public async Task<Dictionary<string, IEnumerable<dynamic>>> GetDiamondFilter(bool isForDataSet, int userId, bool isIncludeOnlyInstockCriteria = false)
         {
             IEnumerable<IEnumerable<dynamic>> data = (await _repository.GetDiamondFilter(true, 18916, true));

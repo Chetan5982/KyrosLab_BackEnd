@@ -9,5 +9,6 @@ namespace BLGDLab.Data.IRepositories
     public interface IDiamondSearchRepository
     {
         Task<IEnumerable<IEnumerable<dynamic>>> GetDiamondFilter(bool IsForDataSet, int userId, bool IsIncludeOnlyInstockCriteria = false);
+        Task<IEnumerable<dynamic>> DimaondSearchData(string json);
     }
 }

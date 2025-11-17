@@ -9,5 +9,6 @@ namespace BLGDLab.Business.IServices
     public  interface IDiamondSearchService
     {
         Task<Dictionary<string, IEnumerable<dynamic>>> GetDiamondFilter(bool IsForDataSet, int userId, bool IsIncludeOnlyInstockCriteria = false);
+        Task<IEnumerable<dynamic>> DimaondSearchData(string json);
     }
 }

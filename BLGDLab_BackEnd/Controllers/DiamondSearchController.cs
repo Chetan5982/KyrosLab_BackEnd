@@ -38,5 +38,26 @@ namespace BLGDLab_BackEnd.Controllers
             return StatusCode((int)httpStatusCode, _response);
 
         }
+
+        [HttpPost(Name ="Search")]
+        public async Task<IActionResult> SearchDiamondResult([FromBody] string jsonParam)
+        {
+            HttpStatusCode httpStatusCode = HttpStatusCode.OK;
+            var data = await _diamondSearchService.DimaondSearchData(jsonParam);
+
+            if (data ==  null)
+            {
+                httpStatusCode = HttpStatusCode.NotFound;
+                _response.StatusCode = (int)HttpStatusCode.NotFound;
+                _response.Message = "No Data Found";
+            }
+            else
+            {
+                _response.StatusCode = (int)HttpStatusCode.OK;
+                _response.Data = data;
+            }
+
+            return StatusCode((int)httpStatusCode, _response);
+        }
     }
 }
