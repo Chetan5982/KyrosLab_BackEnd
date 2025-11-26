@@ -108,3 +108,6 @@ desktop.ini
 /BLGDLab_BackEnd/Properties/launchSettings.json
 /BLGDLab_BackEnd/BLGDLab_BackEnd.csproj.user
 /BLGDLab_BackEnd/Properties
+/BLGDLab.Business/obj/Debug/net9.0/BLGDLab.Business.GlobalUsings.g.cs
+/BLGDLab.Data/obj/Debug/net9.0/BLGDLab.Data.GlobalUsings.g.cs
+/BLGDLab_BackEnd/obj/Debug/net9.0/BLGDLab_BackEnd.GlobalUsings.g.cs
