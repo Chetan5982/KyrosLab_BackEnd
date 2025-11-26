@@ -63,14 +63,14 @@ blgdConnString = string.IsNullOrWhiteSpace(blgdConnString) ? builder.Configurati
 builder.Services.AddDataAccessLayer(builder.Configuration, blgdConnString);
 builder.Services.AddBLAccessLayer();
 
-builder.WebHost.UseKestrel(options =>
-{
-    options.ListenAnyIP(5004); // HTTP fixed port
-    options.ListenAnyIP(5005, listenOptions =>
-    {
-        listenOptions.UseHttps(); // HTTPS fixed port
-    });
-});
+//builder.WebHost.UseKestrel(options =>
+//{
+//    options.ListenAnyIP(5004); // HTTP fixed port
+//    options.ListenAnyIP(5005, listenOptions =>
+//    {
+//        listenOptions.UseHttps(); // HTTPS fixed port
+//    });
+//});
 
 var app = builder.Build();
 
